@@ -268,9 +268,30 @@ nav a:hover {
   background: #ffffff;
 }
 
+.price-note {
+  text-align: center;
+  margin-top: -25px;
+  margin-bottom: 35px;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.test-category {
+  margin: 40px 0 18px;
+  padding: 20px 24px;
+  background: #06152d;
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0 18px 45px rgba(6, 21, 45, 0.12);
+}
+
+.test-category h3 {
+  font-size: 24px;
+}
+
 .test-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 18px;
 }
 
@@ -283,6 +304,11 @@ nav a:hover {
   color: #06152d;
   border: 1px solid #e4e9f2;
   transition: 0.35s;
+  cursor: pointer;
+  min-height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .test-card:hover {
@@ -290,13 +316,6 @@ nav a:hover {
   color: white;
   transform: translateY(-8px);
   box-shadow: 0 18px 40px rgba(6, 21, 45, 0.16);
-}
-
-.price-note {
-  text-align: center;
-  margin-top: 30px;
-  color: #64748b;
-  font-weight: 600;
 }
 
 .package-grid {
@@ -475,6 +494,80 @@ footer p {
   background: #d90429;
 }
 
+.test-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 21, 45, 0.72);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  padding: 20px;
+}
+
+.test-popup.active {
+  display: flex;
+}
+
+.popup-box {
+  background: white;
+  width: 100%;
+  max-width: 540px;
+  padding: 35px;
+  border-radius: 26px;
+  position: relative;
+  animation: popupZoom 0.35s ease;
+}
+
+.close-popup {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  border: none;
+  background: #06152d;
+  color: white;
+  font-size: 24px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.popup-box h2 {
+  font-size: 29px;
+  margin-bottom: 12px;
+  padding-right: 35px;
+}
+
+.popup-box h3 {
+  color: #0066ff;
+  margin-bottom: 15px;
+}
+
+.popup-box p {
+  color: #53637a;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.popup-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.popup-actions a {
+  background: #06152d;
+  color: white;
+  padding: 13px 18px;
+  border-radius: 12px;
+  font-weight: 800;
+}
+
+.popup-actions a:last-child {
+  background: #18b75d;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(45px);
@@ -496,6 +589,18 @@ footer p {
   }
 }
 
+@keyframes popupZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 @media (max-width: 1100px) {
   .hero,
   .about-grid,
@@ -504,7 +609,7 @@ footer p {
   }
 
   .test-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .package-grid {
@@ -592,5 +697,13 @@ footer p {
   .float {
     font-size: 12px;
     padding: 11px 12px;
+  }
+
+  .popup-box {
+    padding: 28px;
+  }
+
+  .popup-box h2 {
+    font-size: 24px;
   }
 }
