@@ -26,6 +26,27 @@ function sendMessage(event) {
   event.target.reset();
 }
 
+function openTest(title, price, desc) {
+  document.getElementById("popupTitle").innerText = title;
+  document.getElementById("popupPrice").innerText = price;
+  document.getElementById("popupDesc").innerText = desc;
+
+  const text =
+    "Hello Sri Sai Purna Laboratory,%0A%0A" +
+    "I want to enquire about this lab test:%0A%0A" +
+    "Test: " + title + "%0A" +
+    "Price: " + price;
+
+  document.getElementById("popupWhatsapp").href =
+    "https://wa.me/917947148767?text=" + text;
+
+  document.getElementById("testPopup").classList.add("active");
+}
+
+function closeTest() {
+  document.getElementById("testPopup").classList.remove("active");
+}
+
 const revealElements = document.querySelectorAll(".reveal");
 
 const revealObserver = new IntersectionObserver(
@@ -43,4 +64,10 @@ const revealObserver = new IntersectionObserver(
 
 revealElements.forEach(function(element) {
   revealObserver.observe(element);
+});
+
+document.getElementById("testPopup").addEventListener("click", function(event) {
+  if (event.target.id === "testPopup") {
+    closeTest();
+  }
 });
