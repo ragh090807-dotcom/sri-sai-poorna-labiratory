@@ -122,33 +122,116 @@
 <section class="section tests" id="tests">
   <div class="section-title reveal">
     <p>Lab Tests</p>
-    <h2>Available Tests and Services</h2>
-  </div>
-
-  <div class="test-grid">
-    <div class="test-card reveal">Blood Test</div>
-    <div class="test-card reveal">Urine Test</div>
-    <div class="test-card reveal">Stool Test</div>
-    <div class="test-card reveal">Stool pH Test</div>
-    <div class="test-card reveal">CBC Test</div>
-    <div class="test-card reveal">Sugar Test</div>
-    <div class="test-card reveal">Thyroid Profile</div>
-    <div class="test-card reveal">Lipid Profile</div>
-    <div class="test-card reveal">Liver Function Test</div>
-    <div class="test-card reveal">Kidney Function Test</div>
-    <div class="test-card reveal">Dengue Test</div>
-    <div class="test-card reveal">Malaria Test</div>
-    <div class="test-card reveal">Typhoid Test</div>
-    <div class="test-card reveal">Vitamin Test</div>
-    <div class="test-card reveal">Pregnancy Test</div>
-    <div class="test-card reveal">ECG</div>
-    <div class="test-card reveal">Health Checkup Packages</div>
-    <div class="test-card reveal">Preventive Health Screening</div>
+    <h2>Click a Test to View Price and Details</h2>
   </div>
 
   <p class="price-note reveal">
     Test prices are indicative and may vary. Please call or WhatsApp for exact price details.
   </p>
+
+  <div class="test-category reveal">
+    <h3>Stool Test</h3>
+  </div>
+
+  <div class="test-grid">
+    <div class="test-card reveal" onclick="openTest('Stool pH Test', '₹200 onwards / test', 'Stool pH Test checks acidity or alkalinity of stool and helps identify digestive imbalance.')">Stool pH Test</div>
+
+    <div class="test-card reveal" onclick="openTest('Stool Analysis Test', '₹400 onwards / test', 'A complete stool sample examination used to check digestive health, infection and other stool parameters.')">Stool Analysis Test</div>
+
+    <div class="test-card reveal" onclick="openTest('Stool Test For Hanging Drop', '₹300 onwards / test', 'This test is used for detailed stool examination and helps in checking digestive tract related conditions.')">Stool Test For Hanging Drop</div>
+
+    <div class="test-card reveal" onclick="openTest('Stool Routine Test', '₹150 onwards / test', 'Stool routine test checks stool consistency, color, occult blood and other routine parameters.')">Stool Routine Test</div>
+
+    <div class="test-card reveal" onclick="openTest('Stool Culture Test', '₹500 onwards / test', 'Stool culture test helps identify bacterial, viral or parasitic infections in the gastrointestinal tract.')">Stool Culture Test</div>
+  </div>
+
+  <div class="test-category reveal">
+    <h3>Blood Test</h3>
+  </div>
+
+  <div class="test-grid">
+    <div class="test-card reveal" onclick="openTest('CBC Test', '₹200 onwards / test', 'CBC test checks blood cells and helps detect infection, weakness, anemia and general health issues.')">CBC Test</div>
+
+    <div class="test-card reveal" onclick="openTest('Thyroid Profile Test', '₹400 onwards / test', 'Thyroid profile checks thyroid hormone levels like TSH, T3 and T4.')">Thyroid Profile Test</div>
+
+    <div class="test-card reveal" onclick="openTest('Malaria Test', '₹200 onwards / test', 'Malaria test detects the presence of malaria parasite in blood.')">Malaria Test</div>
+
+    <div class="test-card reveal" onclick="openTest('C Reactive Protein CRP Test', '₹300 onwards / test', 'CRP test detects inflammation in the body and helps identify various health conditions.')">C Reactive Protein CRP Test</div>
+
+    <div class="test-card reveal" onclick="openTest('Pleural Fluid Analysis Test', '₹1000 onwards', 'Pleural fluid analysis is used to examine pleural fluid and support diagnosis of pleural effusion related conditions.')">Pleural Fluid Analysis Test</div>
+
+    <div class="test-card reveal" onclick="openTest('Microalbumin Creatinine Ratio Test', 'Ask for price', 'This test helps assess kidney function and detect early signs of kidney damage.')">Microalbumin Creatinine Ratio Test</div>
+
+    <div class="test-card reveal" onclick="openTest('PUS for Reticuloendothelial Test', 'Ask for price', 'This test helps assess conditions related to the reticuloendothelial system.')">PUS for Reticuloendothelial Test</div>
+  </div>
+
+  <div class="test-category reveal">
+    <h3>Plasma Test</h3>
+  </div>
+
+  <div class="test-grid">
+    <div class="test-card reveal" onclick="openTest('Prothrombin Time Test', '₹300 onwards / test', 'PT test evaluates blood clotting and is useful for monitoring anticoagulant therapy.')">Prothrombin Time Test</div>
+
+    <div class="test-card reveal" onclick="openTest('Glucose Plasma Test', '₹100 onwards / test', 'Glucose plasma test measures sugar level in blood plasma and helps monitor diabetes.')">Glucose Plasma Test</div>
+
+    <div class="test-card reveal" onclick="openTest('Plasma Fibrinogen Test', '₹800 onwards / test', 'Plasma fibrinogen test measures fibrinogen level, important for clotting related evaluation.')">Plasma Fibrinogen Test</div>
+
+    <div class="test-card reveal" onclick="openTest('Ammonia EDTA Plasma Test', '₹500 onwards / test', 'This test measures ammonia levels in blood and helps evaluate liver function or metabolic disorders.')">Ammonia EDTA Plasma Test</div>
+
+    <div class="test-card reveal" onclick="openTest('Toxoplasma IgM Test', '₹1000 onwards / test', 'Toxoplasma IgM test detects recent infection caused by Toxoplasma gondii parasite.')">Toxoplasma IgM Test</div>
+  </div>
+
+  <div class="test-category reveal">
+    <h3>Swab Test</h3>
+  </div>
+
+  <div class="test-grid">
+    <div class="test-card reveal" onclick="openTest('Nasal Swab Culture & Sensitivity Test', '₹800 onwards / test', 'This test checks bacterial or fungal infections in the nasal cavity.')">Nasal Swab Culture & Sensitivity Test</div>
+
+    <div class="test-card reveal" onclick="openTest('SARS CoV-2 RT PCR Test', '₹500 onwards / test', 'RT PCR test is used to detect active COVID infection.')">SARS CoV-2 RT PCR Test</div>
+
+    <div class="test-card reveal" onclick="openTest('Throat Swab Culture & Sensitivity Test', '₹600 onwards / test', 'This test identifies throat bacterial infection and helps decide suitable antibiotics.')">Throat Swab Culture & Sensitivity Test</div>
+  </div>
+
+  <div class="test-category reveal">
+    <h3>Urine Test</h3>
+  </div>
+
+  <div class="test-grid">
+    <div class="test-card reveal" onclick="openTest('Urine Culture Test', '₹400 onwards / test', 'Urine culture test helps identify bacteria or infection in the urinary tract.')">Urine Culture Test</div>
+
+    <div class="test-card reveal" onclick="openTest('Urine Analysis Test', '₹250 onwards / test', 'Urine analysis checks color, clarity, specific gravity, pH, protein, sugar and other urine parameters.')">Urine Analysis Test</div>
+
+    <div class="test-card reveal" onclick="openTest('Urine Routine Test', '₹150 onwards / test', 'Urine routine test helps detect abnormalities like blood, protein, glucose and bacteria in urine.')">Urine Routine Test</div>
+
+    <div class="test-card reveal" onclick="openTest('Urine Test For Pregnancy', '₹100 onwards / test', 'Pregnancy test detects hCG hormone in urine and helps confirm pregnancy.')">Urine Test For Pregnancy</div>
+
+    <div class="test-card reveal" onclick="openTest('Urine Sugar & Protein Test', '₹200 onwards / test', 'This test detects sugar and protein in urine, useful for diabetes and kidney related screening.')">Urine Sugar & Protein Test</div>
+
+    <div class="test-card reveal" onclick="openTest('Citrate Urine Test', 'Ask for price', '24 hours citrate urine test helps assess urinary citrate levels.')">Citrate Urine Test</div>
+
+    <div class="test-card reveal" onclick="openTest('Urinary Bladder Test', 'Ask for price', 'This test helps evaluate urinary bladder function and health.')">Urinary Bladder Test</div>
+
+    <div class="test-card reveal" onclick="openTest('Specific Gravity Test', 'Ask for price', 'Specific gravity test checks urine concentration and hydration status.')">Specific Gravity Test</div>
+
+    <div class="test-card reveal" onclick="openTest('Routine Examination Urine Test', 'Ask for price', 'Routine urine examination helps assess overall health and detect possible medical conditions.')">Routine Examination Urine Test</div>
+
+    <div class="test-card reveal" onclick="openTest('Chyluria Urine Test', 'Ask for price', 'This test detects chyle in urine and helps diagnose related urinary conditions.')">Chyluria Urine Test</div>
+
+    <div class="test-card reveal" onclick="openTest('Urinary Oxalate Quantitative 24 Hrs Test', 'Ask for price', 'This test measures oxalate levels in urine over 24 hours.')">Urinary Oxalate Quantitative 24 Hrs Test</div>
+
+    <div class="test-card reveal" onclick="openTest('Eosinophills Urine Test', 'Ask for price', 'This test detects eosinophils in urine and may help identify allergic or inflammatory conditions.')">Eosinophills Urine Test</div>
+
+    <div class="test-card reveal" onclick="openTest('HB Urine Test', 'Ask for price', 'HB urine test detects hemoglobin in urine and helps identify related medical issues.')">HB Urine Test</div>
+  </div>
+
+  <div class="test-category reveal">
+    <h3>Sputum Test</h3>
+  </div>
+
+  <div class="test-grid">
+    <div class="test-card reveal" onclick="openTest('Acid Fast Bacilli Culture Blood Test', 'Ask for price', 'This test helps detect mycobacterial infections including tuberculosis.')">Acid Fast Bacilli Culture Blood Test</div>
+  </div>
 </section>
 
 <section class="section packages" id="packages">
@@ -210,8 +293,7 @@
   <div class="faq-box reveal">
     <h3>4. Do they provide home blood sample collection?</h3>
     <p>
-      Many pathology labs provide home sample collection. Please call the laboratory
-      directly to confirm availability.
+      Please call the laboratory directly to confirm home sample collection availability.
     </p>
   </div>
 </section>
@@ -256,7 +338,6 @@
         <option>Blood Test</option>
         <option>Urine Test</option>
         <option>Stool Test</option>
-        <option>Stool pH Test</option>
         <option>CBC Test</option>
         <option>Thyroid Profile</option>
         <option>Full Body Checkup</option>
@@ -280,6 +361,20 @@
   <a href="tel:7947148767" class="float call">Call</a>
   <a href="https://wa.me/917947148767" target="_blank" class="float wa">WhatsApp</a>
   <a href="tel:7947148767" class="float sos">Emergency</a>
+</div>
+
+<div class="test-popup" id="testPopup">
+  <div class="popup-box">
+    <button class="close-popup" onclick="closeTest()">×</button>
+    <h2 id="popupTitle"></h2>
+    <h3 id="popupPrice"></h3>
+    <p id="popupDesc"></p>
+
+    <div class="popup-actions">
+      <a href="tel:7947148767">Call Now</a>
+      <a id="popupWhatsapp" target="_blank">WhatsApp Enquiry</a>
+    </div>
+  </div>
 </div>
 
 <script src="script.js"></script>
