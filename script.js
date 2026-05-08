@@ -15,7 +15,7 @@ function sendMessage(event) {
 
   const text =
     "Hello Sri Sai Purna Laboratory,%0A%0A" +
-    "I want to enquire/book a lab test.%0A%0A" +
+    "I want to enquire about a lab test.%0A%0A" +
     "Name: " + name + "%0A" +
     "Phone: " + phone + "%0A" +
     "Selected Test: " + (test || "Not selected") + "%0A" +
@@ -26,14 +26,13 @@ function sendMessage(event) {
   event.target.reset();
 }
 
-const sections = document.querySelectorAll(".section, .test-card, .package-card");
+const revealElements = document.querySelectorAll(".reveal");
 
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
+const revealObserver = new IntersectionObserver(
+  function(entries) {
+    entries.forEach(function(entry) {
       if (entry.isIntersecting) {
-        entry.target.style.opacity = "1";
-        entry.target.style.transform = "translateY(0)";
+        entry.target.classList.add("active");
       }
     });
   },
@@ -42,9 +41,6 @@ const observer = new IntersectionObserver(
   }
 );
 
-sections.forEach(section => {
-  section.style.opacity = "0";
-  section.style.transform = "translateY(35px)";
-  section.style.transition = "0.8s ease";
-  observer.observe(section);
+revealElements.forEach(function(element) {
+  revealObserver.observe(element);
 });
